@@ -33,7 +33,7 @@
             </ul>
             @auth()
             <div class="profile">
-                <h5>Ilia</h5>
+                <h5>{{\Illuminate\Support\Facades\Auth::user()->name}}</h5>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>

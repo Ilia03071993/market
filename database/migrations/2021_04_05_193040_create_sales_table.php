@@ -21,6 +21,7 @@ class CreateSalesTable extends Migration
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('phone')->nullable();
             $table->float('price')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedInteger('public')->default(1); // 0 - не опубликовано..
             $table->timestamps();
         });
