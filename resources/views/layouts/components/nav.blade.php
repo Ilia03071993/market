@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container" >
         <a class="navbar-brand" href="#">
-            <img src="https://image.freepik.com/free-vector/happy-shop-logo-template_57516-57.jpg" alt="Logo"
-                 style="width: 10%">
+            <img src="https://image.freepik.com/free-vector/happy-shop-logo-template_57516-57.jpg" alt="Logo" style="width: 30%">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +31,7 @@
                 @endguest
             </ul>
             @auth()
-            <div class="profile">
+            <div class="profile" style="margin-bottom:35px;">
                 <h5>{{\Illuminate\Support\Facades\Auth::user()->name}}</h5>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf

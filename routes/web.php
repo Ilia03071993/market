@@ -18,14 +18,14 @@ use App\Http\Controllers\SalesController;
 
 Auth::routes();
 
-Route::get('/',[PagesController::class, "home"])->name('home');
-Route::get('/sale/{id}',[PagesController::class, "sale"])->name('sale');
+Route::get('/', [PagesController::class, "home"])->name('home');
+Route::get('/sale/{id}', [PagesController::class, "sale"])->name('sale');
 Route::get('/create', [PagesController::class, "createSale"])->name('create-sale');
 Route::get('/sales', [PagesController::class, "mySales"])->name('my-sales');
 
-Route::group(["middleware" => ["auth"]], function (){
-    Route::post('/sales',[\App\Http\Controllers\SalesController::class,"store"])->name('store-sale');
-    Route::post('/public-sale/{id}',[\App\Http\Controllers\SalesController::class,"publicSale"])->name('public-sale');
+Route::group(["middleware" => ["auth"]], function () {
+    Route::post('/sales', [\App\Http\Controllers\SalesController::class, "store"])->name('store-sale');
+    Route::post('/public-sale/{id}', [\App\Http\Controllers\SalesController::class, "publicSale"])->name('public-sale');
 });
 
 
